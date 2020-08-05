@@ -1,0 +1,12 @@
+---
+# file: roles/docker/tasks/main.yml
+
+- name: Install docker Package
+  homebrew_cask:
+    name: docker
+    state: present
+
+- name: Install docker-compose Package
+  homebrew:
+    name: ['docker-compose']
+    state: present

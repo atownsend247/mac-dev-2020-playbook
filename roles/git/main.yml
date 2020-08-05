@@ -1,0 +1,7 @@
+---
+# file: roles/git/tasks/main.yml
+
+- name: Install git Package
+  homebrew:
+    name: ['git']
+    state: present

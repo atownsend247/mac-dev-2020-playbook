@@ -1,0 +1,11 @@
+---
+# file: site.local.yml
+
+- hosts: macbook_pro
+  connection: local
+  roles:
+  - macbook_pro
+  - docker
+  - git
+  - nodejs
+  - vscode

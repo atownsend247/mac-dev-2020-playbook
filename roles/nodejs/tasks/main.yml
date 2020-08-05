@@ -1,0 +1,7 @@
+---
+# file:  roles/nodejs/tasks/main.yml
+
+- name: Install nodejs Packages
+  homebrew:
+    name: ['node']
+    state: present

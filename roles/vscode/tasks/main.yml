@@ -1,0 +1,9 @@
+---
+# file:  roles/vscode/tasks/main.yml
+
+- name: Install visual-studio-code Package
+  homebrew_cask:
+    name: [
+      'visual-studio-code'
+    ]
+    state: present
