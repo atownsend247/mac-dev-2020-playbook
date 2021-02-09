@@ -17,7 +17,7 @@
   - iterm2
   - rectangle
 
-- name: Ammend zsh specific settings
+- name: Amend zsh specific settings
   lineinfile:
     path: /etc/shells
     line: /usr/local/bin/zsh
@@ -48,6 +48,7 @@
     path: "{{ lookup('env','HOME') }}//.zshrc"
     line: "source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme"
     state: present
+    create: yes
 
 - name: Install zsh plugins into .zshrc
   lineinfile:
@@ -62,7 +63,7 @@
 - name: Ammend zsh plugins settings
   lineinfile:
     path: "{{ lookup('env','HOME') }}/.zshrc"
-    line: plugins=(alias-finder brew common-aliases copydir copyfile docker docker-compose dotenv encode64 extract git jira jsontools node npm npx osx urltools vi-mode vscode web-search z)
+    line: plugins=(alias-finder brew common-aliases copydir copyfile docker docker-compose dotenv encode64 extract git jira jsontools node npm osx urltools vi-mode vscode web-search z)
     state: present
     regexp: '^plugins='
 
